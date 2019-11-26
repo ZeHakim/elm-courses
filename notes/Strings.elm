@@ -1,5 +1,10 @@
 module Strings exposing (..)
 
+{-| Le but est de tester les bibliothèques de gestion des String et de
+comprendre comment celles-ci sont implémentées. -}
+
+-- Teste si une String est un palyndrome, i.e. si elle peut se lire dans
+--   les deux sens.
 isPalyndrome : String -> Bool
 isPalyndrome possiblePal =
   let strLen = String.length possiblePal in
@@ -16,6 +21,8 @@ isPalyndrome possiblePal =
 alphabet : String
 alphabet = "abcdefghijklmnopqrstuvwxyz"
 
+-- Teste si une String est un pangramme, i.e. si il contient toutes
+--   les lettres de l'alphabet.
 isPangram : String -> Bool
 isPangram possiblePan =
   let alphabetAsChars = String.toList alphabet
